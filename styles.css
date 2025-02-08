@@ -1,0 +1,385 @@
+/* 기본 스타일 */
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'NanumSquare', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EDEDED;
+    text-align: center;
+}
+
+/* 네비게이션 바 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #EDEDED;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    box-shadow: none !important;
+}
+
+/* 로고 + 네비게이션 링크를 왼쪽 정렬 */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* 네비게이션 링크 스타일 */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid black;
+}
+
+/* 연락처 (우측 정렬) */
+.contact {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 이메일 버튼 스타일 수정 */
+.email-btn {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 20px; /* 더 넉넉한 패딩으로 타원형 느낌 강화 */
+    cursor: pointer;
+    border-radius: 50px; /* 타원형 버튼 */
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 40px;
+}
+
+/* 버튼 호버 효과 */
+.email-btn:hover {
+    background: #eee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+
+/* 히어로 섹션 */
+.hero {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 1;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: -6px;
+}
+
+.hero-content-container{
+    margin-top: -30px;
+}
+
+.hero-content-container-left {
+    margin-top: -50px;
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+}
+
+.hero-content-container-right {
+    margin-top: -40px;
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+}
+
+.custom-text br{
+    display: block;
+    margin-top: -10px;
+    content: "";
+}
+
+
+/* 프로필 이미지 */
+.profile-img {
+    width: 450px;
+    margin-top: 30px;
+    border-radius: 40px;
+}
+
+/* 햄버거 메뉴 버튼 (기본 숨김) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* 🚀 오버레이 스타일 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: #EDEDED;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 9999;
+}
+
+.overlay.active {
+    transform: translateY(0);
+}
+
+/* 오버레이 활성화 */
+.overlay.active {
+    transform: translateY(0);
+}
+
+/* 🚀 닫기 버튼 스타일 */
+.close-btn button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+/* 네비게이션 링크 */
+.overlay-content a {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin: 20px 0;
+}
+
+/* 연락처 섹션 */
+.contact-section {
+    margin-top: 20px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 푸터 스타일 */
+.upper-footer {
+    background: #101010;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.lower-footer {
+    background: #1c1c1c;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 푸터 헤더 */
+.footer-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.footer-header p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 이메일 버튼 */
+.email-btn {
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email-btn:hover {
+    background: #ccc;
+}
+
+/* 푸터 콘텐츠 (2단 레이아웃) */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+    margin-right: 40px;
+}
+
+.footer-column h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+/* 기본 상태: 처음에는 완전히 보이도록 설정 */
+.fade-section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+/* 🚀 빠른 페이드인 */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.menu-toggle button {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 9999;
+    pointer-events: auto;
+    position: relative;
+}
+
+/* 반응형 설정 */
+@media (max-width: 768px) {
+    .nav-container {
+        display: none; /* 기본적으로 숨김 */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h1 {
+        font-size: 80px;
+        font-weight: 900;
+        line-height: 1;
+        font-family: 'DM Sans', sans-serif;
+        letter-spacing: -6px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    /* 햄버거 버튼 보이기 */
+    .menu-toggle {
+        display: block;
+        margin-right: 40px;
+    }
+
+    /* 활성화 시 보이기 */
+    .nav-container.active {
+        display: flex;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
